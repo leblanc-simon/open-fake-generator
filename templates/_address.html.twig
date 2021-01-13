@@ -1,0 +1,41 @@
+<address class="address">
+    <header>
+        {{ 'Address'|trans({}, 'address') }}
+    </header>
+    <div class="content">
+        <div class="label">{{ 'street'|trans({}, 'address') }}</div>
+        <div class="value">{{ address.street }}</div>
+
+        {% if address.secondary_street %}
+        <div class="label">{{ 'secondary_street'|trans({}, 'address') }}</div>
+        <div class="value">{{ address.secondary_street }}</div>
+        {% endif %}
+
+        <div class="label">{{ 'postcode'|trans({}, 'address') }}</div>
+        <div class="value">{{ address.postcode }}</div>
+
+        <div class="label">{{ 'city'|trans({}, 'address') }}</div>
+        <div class="value">{{ address.city }}</div>
+
+        <div class="label">{{ 'country'|trans({}, 'address') }}</div>
+        <div class="value">{{ address.country }}</div>
+
+        <div class="label">{{ 'latitude'|trans({}, 'address') }}</div>
+        <div class="value">{{ address.latitude }}</div>
+        <div class="label">{{ 'longitude'|trans({}, 'address') }}</div>
+        <div class="value">{{ address.longitude }}</div>
+
+        {% if address.department_name %}
+            <div class="label">{{ 'department_name'|trans({}, 'address') }}</div>
+            <div class="value">{{ address.department_name }}</div>
+        {% endif %}
+        {% if address.department_number %}
+            <div class="label">{{ 'department_number'|trans({}, 'address') }}</div>
+            <div class="value">{{ address.department_number }}</div>
+        {% endif %}
+        {% if address.region %}
+            <div class="label">{{ 'region'|trans({}, 'address') }}</div>
+            <div class="value">{{ address.region }}</div>
+        {% endif %}
+    </div>
+</address>

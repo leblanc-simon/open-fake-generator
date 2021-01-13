@@ -1,0 +1,9 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    {% include '_person.html.twig' with {'person': person} only %}
+    {% include '_contact.html.twig' with {'contact': person.contact} only %}
+    {% include '_address.html.twig' with {'address': person.address} only %}
+    {% include '_bank.html.twig' with {'bank': person.bank} only %}
+    {% include '_company.html.twig' with {'company': person.company} only %}
+{% endblock %}

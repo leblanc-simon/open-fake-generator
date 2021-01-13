@@ -1,0 +1,26 @@
+<article class="company">
+    <header>
+        {{ 'Company'|trans({}, 'company') }}
+    </header>
+    <div class="content">
+        <div class="label">{{ 'name'|trans({}, 'company') }}</div>
+        <div class="value">{{ company.name }}</div>
+
+        {% if company.siret %}
+            <div class="label">{{ 'siret'|trans({}, 'company') }}</div>
+            <div class="value">{{ company.siret }}</div>
+        {% endif %}
+        {% if company.siren %}
+            <div class="label">{{ 'siren'|trans({}, 'company') }}</div>
+            <div class="value">{{ company.siren }}</div>
+        {% endif %}
+        {% if company.vat %}
+            <div class="label">{{ 'vat'|trans({}, 'company') }}</div>
+            <div class="value">{{ company.vat }}</div>
+        {% endif %}
+
+        {% include '_contact.html.twig' with {'contact': company.contact} only %}
+        {% include '_address.html.twig' with {'address': company.address} only %}
+        {% include '_bank.html.twig' with {'bank': company.bank} only %}
+    </div>
+</article>

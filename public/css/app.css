@@ -1,0 +1,133 @@
+@charset "UTF-8";
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+}
+body > header {
+  display: flex;
+  padding: calc(1rem / 2);
+  background-color: #e8ecf3;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px -4px 10px #4d698e;
+  color: #4d698e;
+}
+body > header h1 {
+  font-size: 1.5rem;
+  position: relative;
+  padding-left: 2.5rem;
+  margin: 0 calc(1rem / 2) 0 0;
+}
+body > header h1::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2rem;
+  content: " ";
+  background: url("../favicon.png") center no-repeat;
+  display: inline-block;
+  background-size: contain;
+}
+body > header nav ul, body > header nav li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+body > header nav ul a, body > header nav li a {
+  padding: 0 calc(1rem / 2);
+}
+
+a, a:visited, a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.label {
+  display: inline;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.value {
+  display: inline;
+  font-weight: bold;
+  background-color: #e8ecf3;
+  padding: calc(1rem / 2) 1rem;
+  margin: calc(1rem / 2);
+  border-radius: 1rem;
+  transition-duration: 0.2s;
+  transition-property: background-color;
+}
+
+.copied {
+  background-color: #4d698e;
+  transition-duration: 0.2s;
+  transition-property: background-color;
+}
+
+.block, .company, .bank, .contact, .address, #person {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #e8ecf3;
+  border-radius: 1rem;
+}
+.block header, .company header, .bank header, .contact header, .address header, #person header {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #4d698e;
+  font-size: 1.2rem;
+}
+.block .content, .company .content, .bank .content, .contact .content, .address .content, #person .content {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+#person header::before {
+  font-family: "open-fake-generator";
+  content: "";
+}
+
+.address header::before {
+  font-family: "open-fake-generator";
+  content: "";
+}
+
+.contact header::before {
+  font-family: "open-fake-generator";
+  content: "";
+}
+
+.bank header::before {
+  font-family: "open-fake-generator";
+  content: "";
+}
+
+.company header::before {
+  font-family: "open-fake-generator";
+  content: "";
+}
+
+address {
+  font-style: normal;
+}
+
+/*# sourceMappingURL=app.css.map */

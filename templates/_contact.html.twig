@@ -1,0 +1,17 @@
+<address class="contact">
+    <header>
+        {{ 'Contact'|trans({}, 'contact') }}
+    </header>
+    <div class="content">
+        <div class="label">{{ 'email'|trans({}, 'contact') }}</div>
+        <div class="value">{{ contact.email }}</div>
+
+        <div class="label">{{ 'phone'|trans({}, 'contact') }}</div>
+        <div class="value">{{ contact.phone }}</div>
+
+        {% if contact.mobile %}
+            <div class="label">{{ 'mobile'|trans({}, 'contact') }}</div>
+            <div class="value">{{ contact.mobile }}</div>
+        {% endif %}
+    </div>
+</address>

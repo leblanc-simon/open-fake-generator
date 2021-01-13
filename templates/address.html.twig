@@ -1,0 +1,5 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    {% include '_address.html.twig' with {'address': address} only %}
+{% endblock %}

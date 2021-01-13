@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="{{ language }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OpenFakeGenerator</title>
+    <link rel="stylesheet" href="./css/open-fake-generator.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="icon" type="image/png" href="./favicon.png">
+</head>
+<body>
+    <header>
+        <h1>OpenFakeGenerator</h1>
+        <nav>
+            <ul>
+                <li><a href="./?type=person&locale={{ language }}">{{ 'person'|trans({}, 'menu') }}</a></li>
+                <li><a href="./?type=contact&locale={{ language }}">{{ 'contact'|trans({}, 'menu') }}</a></li>
+                <li><a href="./?type=address&locale={{ language }}">{{ 'address'|trans({}, 'menu') }}</a></li>
+                <li><a href="./?type=bank&locale={{ language }}">{{ 'bank'|trans({}, 'menu') }}</a></li>
+                <li><a href="./?type=company&locale={{ language }}">{{ 'company'|trans({}, 'menu') }}</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="./js/app.js"></script>
+</body>
+</html>

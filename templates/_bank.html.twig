@@ -1,0 +1,29 @@
+<article class="bank">
+    <header>
+        {{ 'Bank'|trans({}, 'bank') }}
+    </header>
+    <div class="content">
+        <div class="label">{{ 'type'|trans({}, 'bank') }}</div>
+        <div class="value">{{ bank.type }}</div>
+
+        <div class="label">{{ 'number'|trans({}, 'bank') }}</div>
+        <div class="value">{{ bank.number }}</div>
+
+        <div class="label">{{ 'holder_name'|trans({}, 'bank') }}</div>
+        <div class="value">{{ bank.holder_name }}</div>
+
+        <div class="label">{{ 'expiration_date'|trans({}, 'bank') }}</div>
+        <div class="value">{{ bank.expiration_date }}</div>
+
+        <div class="label">{{ 'iban'|trans({}, 'bank') }}</div>
+        <div class="value">{{ bank.iban }}</div>
+
+        <div class="label">{{ 'swift_bic'|trans({}, 'bank') }}</div>
+        <div class="value">{{ bank.swift_bic }}</div>
+
+        {% if bank.bank_account_number %}
+        <div class="label">{{ 'bank_account_number'|trans({}, 'bank') }}</div>
+        <div class="value">{{ bank.bank_account_number }}</div>
+        {% endif %}
+    </div>
+</article>

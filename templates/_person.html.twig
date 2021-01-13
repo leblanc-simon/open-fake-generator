@@ -1,0 +1,29 @@
+<article id="person">
+    <header>
+        {{ 'Person'|trans({}, 'person') }}
+    </header>
+    <div class="content">
+        <div class="label">{{ 'title'|trans({}, 'person') }}</div>
+        <div class="value">{{ person.title }}</div>
+
+        <div class="label">{{ 'lastname'|trans({}, 'person') }}</div>
+        <div class="value">{{ person.lastname }}</div>
+
+        <div class="label">{{ 'firstname'|trans({}, 'person') }}</div>
+        <div class="value">{{ person.firstname }}</div>
+
+        <div class="label">{{ 'birthdate'|trans({}, 'person') }}</div>
+        <div class="value">{{ person.birthdate }}</div>
+
+        {% if person.nir %}
+        <div class="label">{{ 'nir'|trans({}, 'person') }}</div>
+        <div class="value">{{ person.nir }}</div>
+        {% endif %}
+
+        <div class="label">{{ 'username'|trans({}, 'person') }}</div>
+        <div class="value">{{ person.username }}</div>
+
+        <div class="label">{{ 'password'|trans({}, 'person') }}</div>
+        <div class="value">{{ person.password }}</div>
+    </div>
+</article>
