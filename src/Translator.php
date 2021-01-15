@@ -50,6 +50,7 @@ class Translator
             }
         }
 
-        return [];
+        // Fallback to EN
+        return include self::TRANSLATIONS_DIR.'/en.php';
     }
 }

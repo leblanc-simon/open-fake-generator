@@ -87,6 +87,12 @@ main
     align-items: flex-start
     flex-wrap: wrap
 
+.company
+    @extend .block
+    header::before
+        font-family: "open-fake-generator"
+        content: '\e800'
+
 #person
     @extend .block
     header::before
@@ -107,11 +113,6 @@ main
     header::before
         font-family: "open-fake-generator"
         content: '\f19c'
-.company
-    @extend .block
-    header::before
-        font-family: "open-fake-generator"
-        content: '\e800'
 
 address
     font-style: normal

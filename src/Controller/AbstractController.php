@@ -16,7 +16,7 @@ abstract class AbstractController
 {
     protected function getDatas(Request $request): ModelInterface
     {
-        $preferred_language = $request->get('locale', $request->getPreferredLanguage(['fr_FR']));
+        $preferred_language = (string) $request->get('locale', $request->getPreferredLanguage());
         $gender = $request->get('gender');
         $type = $request->get('type');
 
@@ -30,6 +30,10 @@ abstract class AbstractController
 
         if (false === \in_array($gender, ['male', 'female'], true)) {
             $gender = null;
+        }
+
+        if (\strlen($preferred_language) === 2) {
+            $preferred_language .= '_'.\strtoupper($preferred_language);
         }
 
         return new $classname($preferred_language, $gender);

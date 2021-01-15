@@ -75,7 +75,7 @@ a:hover {
   transition-property: background-color;
 }
 
-.block, .company, .bank, .contact, .address, #person {
+.block, .bank, .contact, .address, #person, .company {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -84,13 +84,13 @@ a:hover {
   border: 1px solid #e8ecf3;
   border-radius: 1rem;
 }
-.block header, .company header, .bank header, .contact header, .address header, #person header {
+.block header, .bank header, .contact header, .address header, #person header, .company header {
   margin-bottom: 1rem;
   font-weight: bold;
   color: #4d698e;
   font-size: 1.2rem;
 }
-.block .content, .company .content, .bank .content, .contact .content, .address .content, #person .content {
+.block .content, .bank .content, .contact .content, .address .content, #person .content, .company .content {
   display: flex;
   flex-direction: column;
 }
@@ -99,6 +99,11 @@ main {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
+}
+
+.company header::before {
+  font-family: "open-fake-generator";
+  content: "";
 }
 
 #person header::before {
@@ -119,11 +124,6 @@ main {
 .bank header::before {
   font-family: "open-fake-generator";
   content: "";
-}
-
-.company header::before {
-  font-family: "open-fake-generator";
-  content: "";
 }
 
 address {
